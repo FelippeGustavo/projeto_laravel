@@ -38,7 +38,16 @@
          </div>
         </nav>
         </header>
-        @yield('content')
+    <main>
+        <div class="conteiner-fluid">
+            <div class="row">
+                @if(session('msg'))
+                <p class="msg">{{ session('msg')}}</p>
+                @endif
+                @yield('content')
+            </div>
+        </div>
+    </main>
     <footer>Edge Events &copy; 2022</footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

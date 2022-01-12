@@ -7,10 +7,10 @@ Route::get('/', [EventController::class,'index']);
 
 Route::get('/events/create', [EventController::class,'create']);
 
+Route::post('/events',[EventController::class,'store']);
 
 
-
-Route::get('/contato', function () {
+/*Route::get('/contato', function () {
     return view('contato');
 });
 
@@ -22,4 +22,4 @@ Route::get('/produtos', function () {
 
 Route::get('/produtos_teste/{id?}', function ($id=null) {
     return view('produto',['id'=>$id]);
-});
+});*/
